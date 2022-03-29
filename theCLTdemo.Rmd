@@ -58,8 +58,20 @@ x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 9")
 ```
 
-then 16 random samples
+
 this is starting to look unimodal!
+
+then 16 random samples
+
+```{r}
+numb = 16
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 16")
+```
+
+more like the normal curve
 
 finally for 36 random samples.
 
