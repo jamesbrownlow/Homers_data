@@ -59,6 +59,7 @@ densityplot(x.avg,main="sample size 9")
 ```
 
 then 16 random samples
+this is starting to look unimodal!
 
 finally for 36 random samples.
 
