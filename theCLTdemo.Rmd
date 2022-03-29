@@ -45,6 +45,8 @@ mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 4")
 ```
+Now there appears to be 5 modes!  Decreasing in size from the center mode
+
 
 Then again for 9 random samples
 
