@@ -32,11 +32,11 @@ x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 2")
 ```
 
-Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
+Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size?   
 
- The resulting plot is tri-modal.  Middle peak is higher than those on either side.  The side peaks appear to be the same height. 
+ The resulting plot is tri-modal.  Middle peak is higher than those on either side.  The side peaks appear to be the same height.   
 
-Do this again for 4 random samples
+Do this again for 4 random samples  
 
 ```{r}
 numb = 4
@@ -45,7 +45,7 @@ mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 4")
 ```
-Now there appears to be 5 modes!  Decreasing in size from the center mode
+Now there appears to be 5 modes!  Decreasing in size from the center mode  
 
 
 Then again for 9 random samples
@@ -59,7 +59,7 @@ densityplot(x.avg,main="sample size 9")
 ```
 
 
-this is starting to look unimodal!
+this is starting to look unimodal!  
 
 then 16 random samples
 
@@ -71,14 +71,29 @@ x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 16")
 ```
 
-more like the normal curve
+more like the normal curve  
 
 finally for 36 random samples.
+
+```{r}
+numb = 36
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 36")
+```
+
+definitely unimodal!  
 
 Write a summary paragraph describing what you observed and how it relates to the central limit theorem.
 
 Be sure to comment on both the mean and standard deviation of the sample averages - the CLT makes a statement about what to expect from both.
 
+The more samples used, the closer this becomes to the normal distribution.   The mean remains around 50, but the standard deviation is decreasing!
+
+with 9 samples the data range is 10-90 SD ~ 20  
+with 16 samples data range is 20-80  SD ~ 15  
+with 36 samples data range is 30-70.  SD ~ 10  
  
 
 Then submit the link to your github project  to canvas to complete this assignment.
